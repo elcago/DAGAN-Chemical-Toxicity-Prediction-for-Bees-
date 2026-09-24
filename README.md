@@ -1,20 +1,6 @@
 # DAGAN: Predicting Pesticide Toxicity to Honey Bees
 
-Code for **"Predicting Pesticide Toxicity to Honey Bees Using Molecular Structure and Chemical Properties."**
-
 DAGAN (Descriptor-Augmented Graph Attention Network) combines molecular graphs with physicochemical descriptors through bidirectional cross-attention and gated fusion to predict acute pesticide toxicity to honey bees.
-
-## Paper result summary
-
-The manuscript reports, on a 60/20/20 train/validation/test split of 1,035 ApisTox compounds:
-
-- Accuracy: **86.47%**
-- MCC: **0.65**
-- Toxic-class precision: **87.80%**
-- Toxic-class recall: **61.02%**
-- Non-toxic-class recall: **96.62%**
-
-These are the results reported in the paper. Reproducing them requires the same data split, preprocessing, seed, package versions, and training settings.
 
 ## Repository structure
 
@@ -161,26 +147,4 @@ The default descriptor vector contains the six descriptors retained by the manus
 - NumRotatableBonds
 - NumAromaticRings
 
-## Reproducibility note
 
-The paper does not report the original split indices or every baseline hyperparameter. The code saves generated split indices and keeps these settings in `configs/default.yaml`. Use the original split before comparing results directly with the paper.
-
-## Citation
-
-If you use this repository, cite the accompanying paper and the ApisTox dataset.
-
-```bibtex
-@article{adamczyk2025apistox,
-  title={ApisTox: a new benchmark dataset for the classification of small molecules toxicity on honey bees},
-  author={Adamczyk, Jakub and Poziemski, Jakub and Siedlecki, Pawel},
-  journal={Scientific Data},
-  volume={12},
-  pages={5},
-  year={2025},
-  doi={10.1038/s41597-024-04232-w}
-}
-```
-
-## License
-
-Code in this repository is released under the MIT License. The ApisTox dataset has its own license and is not covered by this repository’s code license.
