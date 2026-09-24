@@ -1,0 +1,36 @@
+seed: 42
+data:
+  csv_path: data/dataset_final.csv
+  smiles_column: smiles
+  label_column: label
+  positive_labels: [1, "1", true, "True", "toxic", "Toxic"]
+  train_fraction: 0.60
+  val_fraction: 0.20
+  test_fraction: 0.20
+  stratify: true
+  descriptors:
+    - MolWt
+    - TPSA
+    - MolLogP
+    - FractionCSP3
+    - NumRotatableBonds
+    - NumAromaticRings
+model:
+  hidden_dim: 64
+  attention_heads: 8
+  dropout: 0.2
+  descriptor_hidden_dim: 64
+  fusion_dim: 64
+training:
+  epochs: 300
+  batch_size: 64
+  learning_rate: 0.0001
+  weight_decay: 0.00001
+  early_stopping_patience: 20
+  alpha_toxic: 0.71
+  gamma: 2.0
+  threshold: 0.50
+explainability:
+  edge_mask_threshold: 0.70
+  shap_background_size: 128
+  shap_eval_size: 207
