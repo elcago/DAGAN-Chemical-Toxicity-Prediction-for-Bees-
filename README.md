@@ -7,7 +7,6 @@ DAGAN (Descriptor-Augmented Graph Attention Network) combines molecular graphs w
 ```text
 DAGAN_HoneyBee_Toxicity/
 ├── configs/default.yaml
-├── data/README.md
 ├── scripts/
 │   ├── descriptor_selection.py
 │   ├── molecular_diversity.py
@@ -25,7 +24,6 @@ DAGAN_HoneyBee_Toxicity/
 │   ├── model.py
 │   └── utils.py
 ├── requirements.txt
-└── LICENSE
 ```
 
 ## Data
